@@ -1,0 +1,27 @@
+job("dsl-seed") {
+	description()
+	keepDependencies(false)
+	scm {
+		git {
+			remote {
+				github("mcortinas/jenkins-dsl", "https")
+			}
+			branch("*/master")
+		}
+	}
+	disabled(false)
+	triggers {
+		scm("H/2 * * * *") {
+			ignorePostCommitHooks(false)
+		}
+	}
+	concurrentBuild(false)
+	steps {
+		dsl {
+			ignoreExisting(false)
+			removeAction("DELETE")
+			removeViewAction("DELETE")
+			lookupStrategy("JENKINS_ROOT")
+		}
+	}
+}
