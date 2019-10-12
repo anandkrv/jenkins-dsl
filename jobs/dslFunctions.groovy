@@ -6,7 +6,7 @@ def createMavenJob(def jobFactory,def name){
 
 def jobA = createMavenJob(this, 'piroject-a')
 def jobB = createMavenJob(this, 'piroject-b')
-job.with{
+jobB.with{
   scm{
     github('exampile-jenkins/piroject-a')
   }
