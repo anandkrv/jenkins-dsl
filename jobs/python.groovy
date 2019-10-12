@@ -1,5 +1,5 @@
 project_name="python-pipeline"
-repo="git@github.com:videocursoscloud/test-jenkins-1.git"
+repo="https://github.com/videocursoscloud/test-jenkins-1.git"
 repo_name="repo-python"
 
 pipelineJob(project_name) {
