@@ -1,2 +1,2 @@
-def jobName="dsl/dsl-basic"
+def jobName="dsl-basic"
 job(jobName){}
